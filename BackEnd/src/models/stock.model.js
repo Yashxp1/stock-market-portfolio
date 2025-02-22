@@ -22,7 +22,7 @@ const stockSchema = new mongoose.Schema(
       min: 0,
     },
     price_2007: {
-      type: String,
+      type: Number,
       min: 0,
     },
     symbol: {
@@ -36,4 +36,5 @@ const stockSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.export = mongoose.model('Stock', stockSchema);
+const Stock = mongoose.model('Stock', stockSchema);
+export default Stock;
