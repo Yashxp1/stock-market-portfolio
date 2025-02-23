@@ -1,10 +1,11 @@
 import express from 'express';
-import { getStocks, addStockToWatchlist } from '../controllers/stockController.js';
+import {
+  getStocks,
+  addStockToWatchlist,
+} from '../controllers/stockController.js';
 
+const stockRouter = express.Router();
+stockRouter.get('/', getStocks);
+stockRouter.post('/', addStockToWatchlist);
 
-const router = express.Router();
-
-router.get('/stocks', getStocks);
-router.post('/stocks', addStockToWatchlist);
-
-export default router;
+export default stockRouter;

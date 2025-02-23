@@ -44,6 +44,7 @@ export const addStockToWatchlist = async (req, res) => {
       message: 'Stock added to watchlist successfully',
       data: stock,
     });
+    console.log("StockController!!")    //-----------cmt
   } catch (error) {
     console.error('Error adding stock:', error);
     res.status(500).json({ success: false, error: 'Internal Server Error' });
